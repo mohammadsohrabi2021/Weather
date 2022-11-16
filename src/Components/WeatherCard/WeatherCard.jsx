@@ -43,7 +43,7 @@ const WeatherCard = ({ cityWeather, city }) => {
                 </Grid>
                 <Grid display={'flex'} justifyContent={'center'} mt={2} >
                     <Link to={`/weather/${city}`}>
-                        <Button variant='outlined' sx={{color:'#000',fontWeight:'bold'}}>
+                        <Button variant='outlined' sx={{ color: '#000', fontWeight: 'bold' }}>
                             {'مشاهده 4 روز آینده'}
                         </Button>
                     </Link>

@@ -22,10 +22,10 @@ const SinglePage = () => {
     }, [])
 
     return (
-        <Grid>
+        <Grid container>
             <Header />
 
-            <Grid xs={12} sx={styles.paperContainer} display={'flex'} flexDirection={'column'} pt={3}>
+            <Grid item xs={12} sx={styles.paperContainer} display={'flex'} flexDirection={'column'} pt={3}>
                 <Container>
                     <Typography variant='h3'>
                         {city}
@@ -40,7 +40,7 @@ const SinglePage = () => {
                     </Link>
                 </Container>
             </Grid>
-            <Grid>
+            <Grid item container>
                 {daysIndex.map(index => <WeatherFutureCard key={index} index={index}
                     cityWeatherFuture={cityWeatherFuture} />)}
             </Grid>
