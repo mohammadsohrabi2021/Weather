@@ -1,6 +1,6 @@
 import { Grid } from '@mui/material';
 import React,{useEffect, useState} from 'react';
-import handleGetOneDayWeather from '../../Api/Api'
+import {handleGetOneDayWeather} from '../../Api/Api'
 import Header from '../../Components/Header/Header'
 import SelectCity from '../../Components/SelectCity/SelectCity'
 import WeatherCard from '../../Components/WeatherCard/WeatherCard'

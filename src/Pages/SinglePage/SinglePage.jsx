@@ -1,7 +1,7 @@
 import { Grid } from '@mui/material';
 import React,{useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import handleGetFiveDayWeather from '../../Api/Api'
+import {handleGetFiveDayWeather} from '../../Api/Api'
 import WeatherFutureCard from '../../Components/WeatherFutureCard/WeatherFutureCard'
 
 

@@ -2,7 +2,7 @@ import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import {Link} from "react-router-dom";
 
-const WeatherCard = () => {
+const WeatherCard = ({cityWeather, city}) => {
     return (
         <Grid container item xs={12} p={2} dir={'rtl'}>
         <Grid item xs={12} md={3} bgcolor={'primary.main'} borderRadius={2} color={'common.white'} p={2}>

@@ -1,6 +1,6 @@
 import { Grid, TextField } from '@mui/material';
 import React from 'react';
-import Cities from '../../Data/Data'
+import {Cities} from '../../Data/Data'
 const SelectCity = ({city, setCurrency}) => {
 
     const handleChange = (event) => {
