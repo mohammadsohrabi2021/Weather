@@ -5,7 +5,7 @@ import { handleGetFiveDayWeather } from '../../Api/Api'
 import WeatherFutureCard from '../../Components/WeatherFutureCard/WeatherFutureCard'
 import Header from '../../Components/Header/Header'
 import { styles } from '../../Data/DataBackground'
-const daysIndex = [0, 8, 16, 24, 32]
+const daysIndex = [0, 8, 16, 24]
 
 
 const SinglePage = () => {
@@ -40,7 +40,7 @@ const SinglePage = () => {
                     </Link>
                 </Container>
             </Grid>
-            <Grid item container>
+            <Grid item container display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} >
                 {daysIndex.map(index => <WeatherFutureCard key={index} index={index}
                     cityWeatherFuture={cityWeatherFuture} />)}
             </Grid>
