@@ -34,8 +34,8 @@ const theme = createTheme({
 
         MuiCssBaseline: {
             styleOverrides: {
+                
                 body: {
-
                     boxSizing: 'border-box',
                     '.flexDir': {
                         '@media only screen and (max-width:590px)': {
@@ -45,7 +45,7 @@ const theme = createTheme({
                     'a': {
                         textDecoration: 'none'
                     },
-
+                    fontFamily:'IRANSANS', 
                 }
 
             }
@@ -64,6 +64,31 @@ const theme = createTheme({
         },
 
     },
+    typography:{
+        fontFamily:'IRANSANS', 
+        h1: {
+        
+          fontSize: '2.5rem',
+          fontWeight: 900,
+          lineHeight: 1.5,
+          color: 'rgba( 0.85,  0,  0.85, 0.85)'
+      },
+        h2: {
+    
+          fontSize: '1.80rem',
+          fontWeight: 800,
+          lineHeight: 1.5,
+          color:'rgba(0, 0, 0, 0.85)'
+         
+          },
+        h3: {
+       
+          fontSize: 12,
+          fontWeight: 700,
+          lineHeight: '18px',
+          color:'rgba(0, 0, 0, 0.85)'
+      },
+    }
 
 });
 
