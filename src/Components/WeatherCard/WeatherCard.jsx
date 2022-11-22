@@ -1,7 +1,7 @@
 import { Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { Link } from "react-router-dom";
-import background from '../../assets/image/sunset.jpg'
+import background from '../../assets/image/image3.jpg'
 
 const WeatherCard = ({ cityWeather, city }) => {
     const styles = {
@@ -13,7 +13,7 @@ const WeatherCard = ({ cityWeather, city }) => {
         }
     };
     return (
-        <Grid container item xs={12} p={2} display={'flex'} justifyContent={'center'}>
+        <Grid container item xs={12} p={2} display={'flex'} justifyContent={'center'} color={'#fff'}>
             <Grid item xs={12} sm={6} md={5} borderRadius={2} sx={styles.paperContainer} p={2}>
                 <Typography variant={'body1'} textAlign={'center'} pt={2}>
                     {cityWeather.name}
@@ -26,24 +26,24 @@ const WeatherCard = ({ cityWeather, city }) => {
                         <Typography>
                             {' سرعت باد:'}
                         </Typography>
-                        {cityWeather?.wind?.speed}
+                        {cityWeather?.wind?.speed}m/s
                     </Typography>
                     <Typography variant={'body1'}>
                         <Typography>
                             {'میزان ابری بودن:'}
                         </Typography>
-                        {cityWeather?.clouds?.all}
+                        {cityWeather?.clouds?.all}%
                     </Typography>
                     <Typography variant={'body1'}>
                         <Typography>
                             {'دما:'}
                         </Typography>
-                        {cityWeather?.main?.temp}
+                        {cityWeather?.main?.temp}°C
                     </Typography>
                 </Grid>
                 <Grid display={'flex'} justifyContent={'center'} mt={2} >
                     <Link to={`/weather/${city}`}>
-                        <Button variant='outlined' sx={{ color: '#000', fontWeight: 'bold' }}>
+                        <Button variant='outlined' sx={{ color: '#fff', fontWeight: 'bold' }}>
                             {'مشاهده 4 روز آینده'}
                         </Button>
                     </Link>

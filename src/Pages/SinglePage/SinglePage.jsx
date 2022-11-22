@@ -5,6 +5,7 @@ import { handleGetFiveDayWeather } from '../../Api/Api'
 import WeatherFutureCard from '../../Components/WeatherFutureCard/WeatherFutureCard'
 import Header from '../../Components/Header/Header'
 import { styles } from '../../Data/DataBackground'
+
 const daysIndex = [0, 8, 16, 24]
 
 
@@ -21,11 +22,12 @@ const SinglePage = () => {
         handleGetData()
     }, [])
 
+
     return (
         <Grid container>
             <Header />
 
-            <Grid item xs={12} sx={styles.paperContainer} display={'flex'} flexDirection={'column'} pt={3}>
+            <Grid item xs={12} sx={styles.paperContainer} display={'flex'} flexDirection={'column'} pt={3} >
                 <Container>
                     <Typography variant='h3'>
                         {city}
@@ -34,13 +36,13 @@ const SinglePage = () => {
                         {'آب و هوای چند روز آینده'}
                     </Typography>
                     <Link to={'/'}>
-                        <Button variant='outlined'>
+                        <Button variant='outlined'sx={{ color: '#fff', fontWeight: 'bold' }}>
                             {'بازگشت به صفحه اصلی'}
                         </Button>
                     </Link>
                 </Container>
             </Grid>
-            <Grid item container display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} >
+            <Grid  item container display={'flex'} flexWrap={'wrap'} justifyContent={'space-around'} >
                 {daysIndex.map(index => <WeatherFutureCard key={index} index={index}
                     cityWeatherFuture={cityWeatherFuture} />)}
             </Grid>
